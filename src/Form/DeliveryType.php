@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Form;
+
+use App\Entity\Transaction;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class DeliveryType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('envoyeur', null, [
+                'required' => true
+            ])
+            ->add('heureEnvoie', null, [
+                'label' => "Heure d'envoie",
+                'required' => true
+            ], DateType::class)
+            ->add('recepteur', null, [
+                'required' => true
+            ])
+            ->add('heureReception', null, [
+                'label' => 'Heure de reception',
+                'required' => true
+            ], DateType::class)
+            // ->add('heureAttente')
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'data_class' => Transaction::class,
+        ]);
+    }
+}

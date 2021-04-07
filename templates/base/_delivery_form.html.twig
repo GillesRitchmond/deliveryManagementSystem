@@ -1,0 +1,45 @@
+<form class="row g-3">
+        {{form_start(form)}}
+                
+    <div class="col-md-6">
+        {{ form_row(form.envoyeur)}}
+    </div>
+    <div class="col-md-6">
+        {{ form_row(form.recepteur)}}
+    </div>
+    <div class="col-md-6">
+        {{ form_row(form.heureEnvoie)}}
+    </div>
+    <div class="col-md-6">
+        {{ form_row(form.heureReception)}}
+    </div>
+    
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">{{button|default('Enregistrer')}}</button>
+    </div>
+    {{form_end(form)}}
+</form>
+
+
+
+{# <input type="number" id="form_age" name="form[age]" required="required" value="33"/> #}
+
+{# <div class="container">
+   <div class="row">
+      <div class='col-sm-6'>
+         <div class="form-group">
+            <div class='input-group date' id='datetimepicker1'>
+               <input type='text' id="form_heureEnvoie" name="form[heureEnvoie]" class="form-control" />
+               <span class="input-group-addon">
+               <span class="glyphicon glyphicon-calendar"></span>
+               </span>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         $(function () {
+             $('#datetimepicker1').datetimepicker();
+         });
+      </script>
+   </div>
+</div> #}

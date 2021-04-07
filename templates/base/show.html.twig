@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Delivery Management System{% endblock %}
+
+{% block body %}
+    <div class="container mx-auto">
+        <div class="content">
+        <div class="row">
+                <div class="col-9">
+                    <h1>Votre liste de livraison</h1>
+                </div>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary">Nouvelle livraison</button>
+                </div>
+            </div>
+            
+            <hr>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Envoyeur</th>
+                        <th scope="col">Recepteur</th>
+                        <th scope="col">Heure d'envoie</th>
+                        <th scope="col">Heure de reception</th>
+                        <th scope="col">Temps d'attente</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">@mdo</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">@mfato</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>Otto</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">@mdfado</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>Otto</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+
+{% endblock %}
